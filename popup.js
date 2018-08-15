@@ -12,14 +12,5 @@ changeColor.onclick = function(element) {
       chrome.tabs.executeScript(
           tabs[0].id,
           {code: 'document.body.style.backgroundColor = "' + color + '";'});
-    });
-
-    let entity = {};
-    entity.hoge = {
-        col1: 'new data'
-    };
-
-    chrome.storage.local.set(entity, function() {
-        console.log('stored');
-    });
+    });;
   };
